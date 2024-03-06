@@ -1,5 +1,5 @@
 import json
-# import yaml
+import yaml
 
 
 def parse(data, format=False):
@@ -11,8 +11,8 @@ def parse(data, format=False):
     file = read_file(data)
     if format == 'json':
         return json_to_dict(file)
-    # elif format == 'yml' or format == 'yaml':
-    #     return yaml_to_dict(file)
+    elif format == 'yml' or format == 'yaml':
+        return yaml_to_dict(file)
     else:
         raise Exception('Invalid file format.')
 
@@ -30,8 +30,8 @@ def json_to_dict(path):
     return json.loads(path)
 
 
-# def yaml_to_dict(path):
-#     '''
-#     Convert a YAML file to a Python dictionary.
-#     '''
-#     return yaml.safe_load(path)
+def yaml_to_dict(path):
+    '''
+    Convert a YAML file to a Python dictionary.
+    '''
+    return yaml.safe_load(path)
