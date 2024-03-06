@@ -4,10 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "python_project_50"}]
+packages = [{include = "hexlet-code"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
 
 
 [build-system]
