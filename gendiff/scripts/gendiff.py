@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from gendiff import cli
-# from gendiff import generate_diff
+from gendiff import generate_diff
 
 
 def main():
@@ -12,8 +12,8 @@ def main():
     between the files, and prints the difference.
     '''
     file_path1, file_path2, format_name = cli()
-    # diff = generate_diff(file_path1, file_path2, format_name)
-    # print(diff)
+    diff = generate_diff(file_path1, file_path2, format_name)
+    print(diff)
 
 
 if __name__ == "__main__":
